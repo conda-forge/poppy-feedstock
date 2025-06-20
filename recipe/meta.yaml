@@ -1,13 +1,13 @@
 {% set name = "poppy" %}
-{% set version = "1.1.1" %}
+{% set version = "1.1.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/poppy-{{ version }}.tar.gz
-  sha256: 37afe1fc24eb31e6799a3110fa0189afac65d624e4e1d19036e6378483591969
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/poppy-{{ version }}.tar.gz
+  sha256: d8bdee1fb01d0048ffcfa0f43102ab9dc46dbba7a26da5206661d147736a7657
 
 build:
   noarch: python
@@ -16,17 +16,18 @@ build:
 
 requirements:
   host:
-    - python >=3.8
-    - setuptools >=38.0.0
-    - setuptools-scm >=2.0.0
+    - python >=3.10
+    - setuptools >=61.2.0
+    - setuptools-scm >=7.1.0
     - wheel
     - pip
   run:
-    - python >=3.8
-    - numpy >=1.18.0
+    - python >=3.10
+    - numpy >=1.20.0
+    - numexpr >=2.9.0
     - scipy >=1.5.0
     - matplotlib-base >=3.2.0
-    - astropy >=4.0.0
+    - astropy >=5.1.0
 
 test:
   imports:
