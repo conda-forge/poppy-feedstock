@@ -1,13 +1,13 @@
 {% set name = "poppy" %}
-{% set version = "1.1.1" %}
+{% set version = "1.2.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/poppy-{{ version }}.tar.gz
-  sha256: 37afe1fc24eb31e6799a3110fa0189afac65d624e4e1d19036e6378483591969
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/poppy-{{ version }}.tar.gz
+  sha256: 39d2679ebba58c45a2dccba904451f835ead499a68eab74ec97e561ba91ebf6f
 
 build:
   noarch: python
